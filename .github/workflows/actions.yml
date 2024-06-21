@@ -24,8 +24,5 @@ jobs:
     - name: Build the application
       run: dotnet build **/*.csproj --no-restore
 
-    - name: Custom script
-      run: |
-        echo "Running custom script"
-        # Add your custom commands here
-        dotnet run --project **/*.csproj
+    - name: Run app
+      run: dotnet run --project **/*.csproj &
